@@ -76,6 +76,7 @@ Refer to Book 1 -> Chapter 1 -> 1.6 (pg#7) for detailed information about what e
 >[!info] Verification vs Validation
 >**Verification:** Are we building the product right?
 >**Validation:** Are we building the right product?
+>
 >Verification refers to <u>Conformance to specification</u>
 >Validation refers to <u>Conformance to user needs/requirements</u>
 #### Exercise 1.3
