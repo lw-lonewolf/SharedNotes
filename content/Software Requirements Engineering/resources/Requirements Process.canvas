@@ -1,0 +1,25 @@
+{
+	"nodes":[
+		{"id":"4fe3b6256966e9b8","type":"text","text":"Elicitation","x":-400,"y":-187,"width":250,"height":60},
+		{"id":"5cc928debd50bf5b","type":"text","text":"Analysis","x":-80,"y":-182,"width":250,"height":50},
+		{"id":"8d6ee8ce8d88d698","type":"text","text":"CHECK THAT OUR SPECIFICATION MATCHES THE USERS REQUIREMENTS","x":520,"y":-16,"width":250,"height":116},
+		{"id":"e297a088e201a5e5","type":"text","text":"DISCUSSING THE BEHAVIOR OF THE PROPOSED SOFTWARE SYSTEM","x":220,"y":-16,"width":250,"height":116},
+		{"id":"36cb1172ab8ca832","type":"text","text":"UNDERSTANDING AND MODELLING THE DESIRED BEHAVIOR","x":-80,"y":-16,"width":250,"height":116},
+		{"id":"02c0ebe959d06c66","type":"text","text":"COLLECTION THE USERS REQUIREMENTS","x":-400,"y":-16,"width":250,"height":116},
+		{"id":"6f402f2bea0248f9","type":"text","text":"Specification","x":220,"y":-187,"width":250,"height":60},
+		{"id":"c4771e9dda97f27a","type":"text","text":"Validation","x":520,"y":-187,"width":250,"height":60},
+		{"id":"e3d9646c02048ecd","type":"text","text":"SRE","x":820,"y":-187,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"8aaa97fba7e87101","fromNode":"4fe3b6256966e9b8","fromSide":"bottom","toNode":"02c0ebe959d06c66","toSide":"top"},
+		{"id":"4b7af20ff8fed6b6","fromNode":"5cc928debd50bf5b","fromSide":"bottom","toNode":"36cb1172ab8ca832","toSide":"top"},
+		{"id":"41ac303e04c79cbe","fromNode":"6f402f2bea0248f9","fromSide":"bottom","toNode":"e297a088e201a5e5","toSide":"top"},
+		{"id":"57ce8ab21df58634","fromNode":"c4771e9dda97f27a","fromSide":"bottom","toNode":"8d6ee8ce8d88d698","toSide":"top"},
+		{"id":"f5f16a038d67c75f","fromNode":"4fe3b6256966e9b8","fromSide":"right","toNode":"5cc928debd50bf5b","toSide":"left"},
+		{"id":"a0cc6a4c15e41d99","fromNode":"5cc928debd50bf5b","fromSide":"right","toNode":"6f402f2bea0248f9","toSide":"left"},
+		{"id":"03518af51a949110","fromNode":"6f402f2bea0248f9","fromSide":"right","toNode":"c4771e9dda97f27a","toSide":"left"},
+		{"id":"6e721642061886e7","fromNode":"c4771e9dda97f27a","fromSide":"right","toNode":"e3d9646c02048ecd","toSide":"left"},
+		{"id":"7531c9a99f6632f1","fromNode":"c4771e9dda97f27a","fromSide":"top","toNode":"4fe3b6256966e9b8","toSide":"top"},
+		{"id":"1fbe384099e57454","fromNode":"5cc928debd50bf5b","fromSide":"top","toNode":"4fe3b6256966e9b8","toSide":"top"}
+	]
+}

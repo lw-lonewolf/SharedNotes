@@ -1,0 +1,2 @@
+## Why Do We Need Software Project Management
+Put simply, without proper software project management, most SP projects exceed their time or budget constraints and have a risk of outright failure. The reason of project shortcomings is normally *lack of skill*
