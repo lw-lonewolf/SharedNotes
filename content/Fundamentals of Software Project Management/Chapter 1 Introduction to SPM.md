@@ -151,3 +151,17 @@ Any project plan must ensure that the business case is kept intact:
 * that the features of the system are not reduced to a level where the expected benefits cannot be realized
 * that the delivery date is not delayed so that there is an unacceptable loss of benefits.
 # Management 
+Management involves the following activities: 
+* planning - deciding what is to be done
+* organizing - making arrangements
+* staffing - selecting the right people for the job
+* directing - giving instructions
+* monitoring - checking on progress
+* controlling - taking actions to remedy hold-ups
+* innovating - coming up with new solutions
+* representing - liaising with clients, users, developer, suppliers and other stakeholders
+
+![[Pasted image 20260220224315.png]]
+
+![[Pasted image 20260220231009.png]]
+Fig: Project Control Cycle
