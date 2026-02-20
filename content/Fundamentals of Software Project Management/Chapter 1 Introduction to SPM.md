@@ -165,3 +165,11 @@ Management involves the following activities:
 
 ![[Pasted image 20260220231009.png]]
 Fig: Project Control Cycle
+
+# Modern Project Management Practices 
+#### Extreme Project Management
+Instead of making a long-term project completion plan, the project manager now plans all incremental deliveries with evolving functionalities. This type of project management is called Extreme Project Management.
+#### Quality Management
+The key responsibilities of project manager now include assessment of project progress and tracking the quality of all intermediate artifacts.
+#### Change Management
+Change Management involves 
