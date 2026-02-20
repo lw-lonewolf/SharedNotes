@@ -87,3 +87,67 @@ Refer to Book 1 -> Chapter 1 -> 1.6 (pg#7) for detailed information about what e
 5) Arrive at the total cost of the software by sum of the costs computed in step 2, 3, 4
 6) Check with the college authorities to see if they agree with the estimated cost and duration for completion of the project. Based on their response make a decision to go ahead with the project or abandon it.
 # Plans, Methods and Methodologies
+A *method* normally relates to a **type** of activity in general. A *plan* takes that method(s) and converts into actual activities, identifying each of the following for each one: 
+* start/end dates
+* who will carry it out
+* what tools and materials will be needed
+A ***methodology*** on the other hand is a group of methods or techniques e.g. object-oriented design.
+# Categorization of Software 
+Following are some forms of categorization for software:
+### Compulsory Vs. Voluntary Users: 
+* A compulsory user is "forced" to use the program - he can not complete his daily duties/tasks without using the program. e.g. Flex System
+* A voluntary user on the other hand "chooses" to use that specific program. 
+
+Software varies on the basis of user type, a software with voluntary users has a more difficult requirement elicitation process and may include techniques such as market surveys, focus groups and prototype evaluations.
+### Information Systems Vs. Embedded Systems
+An embedded system controls machines, while an information system enables staff to carry out office processes and embedded systems. A stock control system would be an information system. An embedded, or process control system, might control the air conditioning equipment in a building.
+### Outsourced Projects
+While developing a large project, sometimes its a good idea for a company to outsource some parts of its work to other companies. There can be several reasons behind such a decision. For example, a company may consider outsourcing, if it does not have sufficient expertise in developing some specific part of product or if it determines some other company might be more capable of developing that part more cost effectively.
+
+>[!info] Economical Factors
+>For a company, building part of an outsourced project would only fetch it one time revenue, while building a generic software product would usually get them an uninterrupted stream of revenue over several years.
+
+### Objective Driven Development
+
+>[!warning]
+>This is **OBJECTIVE DRIVEN DEVELOPMENT** which is in no way related to **OBJECT ORIENTED DEVELOPMENT**
+
+A project might be simply to create a product, whose details have been specified by the client, and its the client's responsibility to justify the product. 
+
+On the other hand, it might be that an organization has a problem and asks a specialist to recommend a solution. 
+
+Many software projects have two stages; First is an objective-driven project resulting in recommendations, This might identify the need for a new software system. The second part is then a project to actually create the software product.
+# Stakeholders
+Stakeholders can be organized into the following major types: 
+* *Internal to the Project Team*: 
+	This means that they will be under the direct managerial control of the project leader.
+* *External to the Project Team but within same organization*:
+	e.g. the project leader may require assistance of the users to carry out system testing. Here the commitment of the people involved has to be negotiated.
+* *External to both the project team and organization*:
+	May be customers (or users) who will benefit from the system the project implements. They may be contractors who will carry out work for the project. The relationship here most depends on Contracts. See [[Chapter 10 Managing Contracts]].
+
+>[!info] Communication Plans
+>It is easy to sometimes miss an important stakeholder group, especially in unfamiliar business contexts. These could be departments supplying important services that may be taken for granted. Given the importance of coordinating the efforts of stakeholders, recommended course of action is to develop a *communication plan* created at the start of a project.
+
+# Setting objectives
+An objective is normally a condition like "*the project will be a success if...*". Therefore one statement of the objective might be "*customers can order our products online*" instead of "*to build an e-commerce website*". There is often one way to meet an objective and the more possible routes to success the better.
+
+Sometimes there may be more than one stakeholders, who might have some claim to project ownership. In such a case, a *project authority* needs to be explicitly identified with overall authority over the project. This authority is often called **Project Board or Project Management Board** with overall responsibility for setting, monitoring and modifying objectives.
+
+>[!important] SMART objectives
+>* *Specific*
+>	not vague like "to improve customer relations"
+>* *Measurable*
+>	can be simple as in "did we install the software by 1 June". "to reduce customer complaints" would be better as an objective than 'to improve customer relations' because the former is measurable to some extent.
+>* *Achievable*
+>* *Relevant*
+>* *Time Constrained*
+
+# The Business Case
+Most projects need to have a justification or a "business case". The effort and expense of pushing the project through must be seen to be worthwhile in terms of the benefits that will eventually be felt. **A cost-benefit analysis** will also be part of the project's feasibility study. This will itemize and quantify the project's costs and benefits. 
+
+Any project plan must ensure that the business case is kept intact: 
+* that development costs are not allowed to rise to a level which threatens to exceed the value of benefits.
+* that the features of the system are not reduced to a level where the expected benefits cannot be realized
+* that the delivery date is not delayed so that there is an unacceptable loss of benefits.
+# Management 
