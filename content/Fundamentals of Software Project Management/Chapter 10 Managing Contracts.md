@@ -54,7 +54,7 @@ In this case, only a certain supplier is invited for a tender. This however expo
 
 # Stages of Contract Placement
 ## Requirements Analysis
-Before approaching potential suppliers, you need to have a clear set of requirements. In this situation, an external consultant can also be approached to draw up a requirements document. 
+	Before approaching potential suppliers, you need to have a clear set of requirements. In this situation, an external consultant can also be approached to draw up a requirements document. 
 
 `The lack of, or defects in, the specification are probably the heart of most disputes resulting from the acquisition of computer equipment and software`
 ***David Bainbridge***

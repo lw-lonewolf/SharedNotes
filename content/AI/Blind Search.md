@@ -56,3 +56,301 @@ We'll measure the performance of problem solving based on four factors:
 * ***Space Complexity*** -> How much memory will it use?
 ## Execution Phase
 Once a solution is found, the action it recommends can be carried out and is called the execution phase. 
+
+### Blind/Uninformed/Brute-force Searches
+* They do not use any information about location of the goal in the search space. 
+* Explore Search Space systematically and blindly, expanding nodes until a solution is found. 
+* First solution may not be optimal if more than one exist.
+* Search process is represented as a search tree, where nodes correspond to states. 
+* Algorithm begins at the initial state and explores the tree until it reaches a goal state. 
+* Different blind search methods are distinguished by how they traverse the search tree.
+
+#### Some Common Measurements
+```mermaid
+graph TD;
+
+id1((1)) --> id2((2));
+id1((1)) --> id3((3));
+
+id2((2)) --> id4((4));
+id2((2)) --> id5((5));
+
+id3((3)) --> id6((6));
+id3((3)) --> id7((7));
+
+id4((4)) --> id8((8));
+id4((4)) --> id9((9));
+
+id5((5)) --> id10((10));
+id5((5)) --> id11((11));
+
+id6((6)) --> id12((12));
+id6((6)) --> id13((13));
+
+id7((7)) --> id14((14));
+id7((7)) --> id15((15));
+```
+**d:** Maximum Level (3 here)
+**h:** height of tree = d + 1 (4)
+**b:** number of maximum children (2)
+
+
+## BFS 
+* Explores breadth-first (level wise). **This uses a queue or a FIFO data structure**
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+style id1 fill:green;
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+```
+Starting from A, we move on to B then C "level-wise"
+
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id3 fill:green;
+
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id3 fill:gray;
+style id4 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id3 fill:gray;
+style id4 fill:gray;
+style id5 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id3 fill:gray;
+style id4 fill:gray;
+style id5 fill:gray;
+style id6 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id3 fill:gray;
+style id4 fill:gray;
+style id5 fill:gray;
+style id6 fill:gray;
+style id7 fill:green;
+
+```
+### Time Complexity
+Assume a state space where every state has `b` successors. Assume solution is at depth `d`. Worst case would be to expand all but the last node at depth d
+
+Total numbers of generated nodes = $b^1 + b^2 + \dots b^d = \boxed{O(b^d)}$
+
+### Space Complexity
+* There will be $O(b^{d-1})$ nodes in the explored set and $O(b^d)$ nodes in the frontier
+* So Space Complexity becomes $\boxed{O(b^d)}$
+
+### BFS Analysis
+* Completeness: BFS is complete if b is finite.
+* Time = $O(b^d)$
+* Space = $O(b^d)$ (Every node is kept in memory)
+* Optimality: Yes, if cost is 1 per step.
+* Space is our bigger problem here as it will explode exponentially.
+
+## DFS
+* DFS explores a search space by going as deep as possible along one path before backtracking. **This uses a stack or a LIFO data structure**
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+style id1 fill:green;
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+```
+Starting from A, we move on to B then D "depth-wise"
+
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+
+id2((B)) --> id4((D));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id4 fill:green;
+
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id2((B));
+id1((A)) --> id3((C));
+id2((B)) --> id5((E));
+
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id2 fill:gray;
+style id5 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id3((C));
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id3 fill:green;
+```
+```mermaid
+graph TD;
+
+id1((A)) --> id3((C));
+id3((C)) --> id6((F));
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id3 fill:gray;
+style id6 fill:green;
+```
+
+```mermaid
+graph TD;
+
+id1((A)) --> id3((C));
+
+
+id3((C)) --> id7((G));
+
+style id1 fill:gray;
+style id3 fill:gray;
+style id7 fill:green;
+```
+>[!important] DFS REMOVAL STRATEGY
+>Whenever there's an explored node with no descendants in the frontier, we remove it from memory
+
+### DFS Analysis
+* Time Complexity = $O(b^m)$ where $m$ is maximal depth. 
+* If $m$ is much larger then $d$ (depth of shallowest solution) then this time complexity is very terrible
+* DFS is faster than BFS if more than one solution exist.
+* Space Complexity: $O(bm)$
+* ***Completeness:*** Fails in infinite-depth spaces
+* ***Optimality:*** Doesn't always return the optimal solution to a problem.
+
+## Iterative Deepening Search (IDS)
+```pcode
+function ITERATIVE-DEEPENING-SEARCH(problem) returns a solution, or failure
+	inputs: problem, a problem
+	
+	for depth <- 0 to infinity do
+		result <- DEPTH-LIMITED-SEARCH(problem, depth)
+		if result != cutoff then return result
+```
