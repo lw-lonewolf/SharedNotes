@@ -354,3 +354,139 @@ function ITERATIVE-DEEPENING-SEARCH(problem) returns a solution, or failure
 		result <- DEPTH-LIMITED-SEARCH(problem, depth)
 		if result != cutoff then return result
 ```
+
+```mermaid
+graph TD;
+A((A))
+A --> B((B))
+A --> C((C))
+
+B --> D((D))
+B --> E((E))
+C --> F((F))
+C --> G((G))
+
+D --> H((H))
+D --> I((I))
+E --> J((J))
+E --> K((K))
+F --> L((L))
+F --> M((M))
+G --> N((N))
+G --> O((O))
+style A fill:green, color:red;
+```
+#### Limit = 0
+```mermaid
+graph BT;
+A((A))
+A -.-> Note1["Limit = 0"]
+```
+```mermaid
+graph BT;
+A((A))
+A -.-> Note1["Limit = 0"]
+style A fill:green;
+```
+#### Limit = 1
+```mermaid
+graph TD;
+A((A))
+A -.-> Note1["Limit = 1"]
+A --> B((B))
+A --> C((C))
+```
+
+```mermaid
+graph TD;
+A((A))
+A -.-> Note1["Limit = 1"]
+A --> B((B))
+A --> C((C))
+style A fill:green
+```
+```mermaid
+graph TD;
+A((A))
+A -.-> Note1["Limit = 1"]
+A --> B((B));
+A --> C((C));
+classDef graycolor fill:gray;
+classDef greencolor fill:green;
+class A graycolor
+class B greencolor
+```
+```mermaid
+graph TD;
+A((A))
+A -.-> Note1["Limit = 1"]
+A --> B((B));
+A --> C((C));
+classDef graycolor fill:gray;
+classDef greencolor fill:green;
+class A,B graycolor
+class C, greencolor
+```
+```mermaid
+graph TD;
+A((A))
+A -.-> Note1["Limit = 1"]
+A --> B((B));
+A --> C((C));
+classDef graycolor fill:gray;
+classDef greencolor fill:green;
+class A,B,C graycolor
+```
+and so on. 
+
+### Why Use IDS?
+IDS may seem wasteful because its obviously expanding the same nodes many times. However this waste isn't that signification e.g. at b = 10 only about 11% more nodes are expanded than a bfs 
+
+* Time Complexity: $O(b^d)$
+* Space Complexity: $O(bd)$
+* For large spaces, where depth of solution isn't known, IDS is the preferred method.
+
+>[!info] Number of Generated Nodes
+>$$N_{IDS} = (d+1)b^0 + (d)b^1 + (d-1)b^2 + (d-2)b^3 + (d-3)b^4 + b^d$$
+
+* **Completeness:** yes
+* ***Time:*** $O(b^d)$
+* **Space:** $O(bd)$
+* **Optimal?** Yes if step cost is 1
+
+## Uniform Cost Search
+```pcode
+	Insert the root into the queue
+	While the queue is not empty
+		Dequeue the maximum priority element from queue
+		(if prorities are same, alphabetically smaller path is chosen)
+		If the path is ending in goal state, print the path and exist 
+		Else
+			Insert all the children of dequeued element, with cumulative costs as priority
+```
+
+#### Example Working:
+```mermaid 
+graph LR;
+S((S)) --99--> F((F))
+S --80--> R((R))
+R --97--> P((P))
+P --101--> B((B))
+F --211--> B
+```
+
+| **iteration** | **Closed List**  | **Opened List**    |
+| ------------- | ---------------- | ------------------ |
+| 1.            | {}               | {S(0)}             |
+| 2.            | {S}              | {F(99), R(80)}     |
+| 3.            | {S, R}           | {F(99), P(177)}    |
+| 4.            | {S, R, F}        | {P(177), B1(310)}  |
+| 5.            | {S, R, F, P}     | {B1(310), B2(278)} |
+| 6.            | {S, R, F, P, B2} |                    |
+Path = S->R->P->B
+
+### Uniform-Cost Search Analysis
+**Complete?** Yes if step cost >= $\epsilon$
+**Time?** # of nodes with g(path cost) <= cost of optimal solution, $O(b^{1+\lfloor {C^*/\epsilon}\rfloor})$
+**Space?** # of nodes with g = cost of optimal solution i.e. $O(b^{1+\lfloor {C^*/\epsilon}\rfloor})$
+**Optimal?** Yes - nodes expanded in increasing order of g(n)
