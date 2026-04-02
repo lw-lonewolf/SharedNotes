@@ -36,9 +36,29 @@
 > i.e. `192.168.1.0` & `192.168.1.255`
 > Therefore total usable hosts would be $2^{8} = 256 \Rightarrow 256-2=254$ usable host addresses
 
-## Subnetting Example 
+## Subnet Masks
+### Subnetting Example 
 assume someone sends data to 200.10.2.45   (a device in IT department)
 
 * External Router knows `200.10.0.0/16` -> company gateway. So it sends it there.
 * Company Gateway (edge router) now knows `200.10.2.0/24` so it forwards it to IT subnet.
 * Now internal router in that subnet will send it to destination.
+### What's a subnet mask?
+A subnet mask is a 32-bit pattern that tells you: 
+which part of an IP = network/subnet
+which part = host
+
+Normally:
+1 -> net/subnet
+0 -> host
+
+`IP: 192.168.8.1`
+`SM: 255.255.255.0 or 11111111.11111111.11111111.00000000`
+`i.e. first 24 bits are network, while 8 are host`
+
+### What's masking (bitwise AND)
+Masking = extracting the network/subnet id using AND
+
+### Default Masks (Classful Systems)
+A -> `255.0.0.0`
+B -> 
