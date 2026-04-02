@@ -1,0 +1,5 @@
+[[9.1 Relations and Properties]]
+[[9.2 n-ary Relations]]
+[[9.3 Representation of Relations]]
+[[9.4 Closures]]
+[[9.5 Equivalence Relations]]
