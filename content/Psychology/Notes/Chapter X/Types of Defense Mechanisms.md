@@ -1,9 +1,0 @@
--> Repression 
--> Projection 
--> Denial 
--> Sublimation
--> Regression
--> Rationalization
--> Displacement 
--> Reaction Formation
--> Intellectualization

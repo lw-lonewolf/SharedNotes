@@ -1,3 +1,0 @@
-- **Work Flow Models:** Usually expressed in flow charts, capturing a process’s goal, frequency/importance of actions, what initiates the process, dependencies, people/roles involved, specific actions, decisions, and error/exception cases (how they are corrected). Note: This captures functionality but little of the humanity.
-- **Artifact Models:** Capture what users "use" in their tasks and work flows (e.g., online or paper forms) to identify best practices for design.
-- **Physical Models:** Capture elements of the user’s environment and physical object layouts in the workspace. These provide insight into frequency-of-use issues and physical barriers to productivity, especially helpful in complex environments (hospitals, assembly lines).

@@ -1,8 +1,0 @@
-[[Five Factor Theory Lewis Goldberg]]
-[[H. Esyenck]]
-[[Hippocrates]]
-[[Personality]]
-[[Psychoanalytic Theory of Personality]]
-[[Trait Theory by Gordon Allport]]
-[[Type A and Type B personalities]]
-[[Types of Defense Mechanisms]]

@@ -1,1 +1,0 @@
-Composition is a special type of an aggregation

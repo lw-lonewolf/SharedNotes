@@ -1,1 +1,0 @@
-Hazrat Muhammad (PBUH) had the best morals in the entire world. The Quran reinforces this fact.

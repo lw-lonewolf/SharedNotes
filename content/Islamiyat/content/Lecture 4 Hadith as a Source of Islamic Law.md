@@ -1,1 +1,0 @@
-[[HADITH.canvas|HADITH]]

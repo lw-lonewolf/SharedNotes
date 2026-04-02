@@ -1,3 +1,0 @@
->[!example] Table of Contents
-
-
